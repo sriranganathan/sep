@@ -1,9 +1,10 @@
 ## Skill Enhancement Programme - DoMS NITT
 
 ##Build instructions
-1.Clone<br>
-2.composer install<br>
-3.php artisan serve<br>
+1. Clone<br>
+2. composer install<br>
+3. php artisan key:generate<br>
+4. php artisan serve<br>
 
 ##Done
 1.Home page<br>
