@@ -43,7 +43,7 @@
 </div>
 <div class="row">
     <div class="col s12 m12 l6">
-        <div class="card white" style="min-height:290px;">
+        <div class="card blue lighten-3" style="min-height:290px;">
             <div class="card-content black-text">
                 <br>
                 <h5>About the Programme</h5>
@@ -56,7 +56,7 @@
     </div>
     <div class="col s12 m12 l6">
         <div class="card white">
-            <div class="card-content center-align black-text">
+            <div class="card-content center-align white-text red">
                 <h5>Vision</h5>
                 <hr>
                 <p>
@@ -67,7 +67,7 @@
     </div>
     <div class="col s12 m12 l6">
         <div class="card white">
-            <div class="card-content center-align black-text">
+            <div class="card-content center-align white-text green">
                 <h5>Mission</h5>
                 <hr>
                 <p>
@@ -81,7 +81,7 @@
 
 <div class="row">
     <div class="col s12 m12 l4">
-        <div style="height:230px" class="card-panel white small">
+        <div style="height:230px" class="card-panel teal small">
             <div class="card-content black-text">
                 <h5>Programme Date</h5>
                 <hr>
