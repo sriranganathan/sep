@@ -3,7 +3,9 @@
 @section('title')
 View Registration
 @stop
+@section('css')
 <link type="text/css" rel="stylesheet" href="{{asset('css/pagination.css')}}"  media="screen,projection"/>
+@stop
 @section('nav-bar')
     <li><a href="/" class="waves-effect waves-light">Home</a></li>
     <li><a href="/area_of_training" class=" waves-effect waves-light">Area Of Training</a></li>

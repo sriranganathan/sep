@@ -27,7 +27,7 @@
             <ul class="collection with-header card">
                 <center><li class="collection-header"><h4>Areas Of Training</h4>
                 <h6 style="font-size:20px;line-height: 30px;">
-					Training areas for this employability SEP are designed to meet the requirements of students, industry 
+					Trainiing areas for this employability SEP are designed to meet the requirements of students, industry 
 					and academic institutions. The broad area of coverage includes: 
                 </h6>
                 <br>
@@ -50,8 +50,6 @@
                 <li class="collection-item">Tips to face competitive exams</li>
                 <li class="collection-item">Creating entrepreneurial mindset</li>
                 </div>
-            </ul>
-            </ul>
             </ul>
     </div>
 </div>    

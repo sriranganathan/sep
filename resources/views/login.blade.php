@@ -3,7 +3,9 @@
 @section('title')
 Login
 @stop
+@section('css')
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+@stop
 @section('nav-bar')
     <li><a href="/" class="waves-effect waves-light">Home</a></li>
     <li><a href="/area_of_training" class=" waves-effect waves-light">Area Of Training</a></li>

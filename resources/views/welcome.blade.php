@@ -96,12 +96,12 @@
             <div class="card-content black-text">
                 <h5>Contact Details</h5>
                 <hr>
-                <p>
+                <div>
                 <h6>Dr.G.MURUGANANTHAM</h6>
                 <p>MBA Dept, NIT -Trichy, 620015.</p>
                 <p>Mobile&nbsp;:&nbsp;9865175135</p>
                 <p>Email &nbsp;:&nbsp;marcon@nitt.edu</p>
-                </p>
+                </div>
             </div>
         </div>
     </div>  

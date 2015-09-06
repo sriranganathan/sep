@@ -9,9 +9,17 @@
         <meta name="description" content="Two-day employability Skill Enhancement Programme">
         <meta name="keywords" content="Skill Enhacement Programme,SEP,2015,NITT,DoMS,Department of Management Studies">
         <script>var base_url = "{{ url('/') }}";</script>
+        @yield('css')
         <style>
             body{
                 background-image: url("{{asset('images/brushed_alu.png')}}");
+                    display: flex;
+                    min-height: 100vh;
+                    flex-direction: column;
+            }
+
+            main {
+            flex: 1 0 auto;
             }
             .container-fluid
             {
@@ -22,11 +30,12 @@
     </head>
     <body>
         <!-- blue-grey lighten-5 -->
+        <main>
         <div class="container-fluid">
             <nav>
                 <div class="nav-wrapper blue white-text">
                     <a href="#" data-activates="mobile-nav" class="waves-effect button-collapse right" style="padding:0 10px"><i class=" mdi-navigation-menu"></i></a>
-                    <a href="/" class="brand-logo " style="padding:0 10px">SEP - 2015</a>
+                    <a href="/" class="brand-logo " style="padding:0 10px">SEP</a>
                     <ul class="nav-mobile right hide-on-med-and-down">
                        @yield('nav-bar')
                     </ul>
@@ -37,6 +46,7 @@
             </nav>
         @yield('content')
         </div>
+        </main>
         <div class="container-fluid">
             <footer class="blue page-footer">
                 <div class="footer-copyright">
