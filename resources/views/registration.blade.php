@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('title')
-    Register
+    Registration
 @stop
 
 @section('css')

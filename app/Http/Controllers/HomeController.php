@@ -34,10 +34,70 @@ class HomeController extends Controller
     {
         return view('registration');
     }
+    public function registrationshow()
+    {
+        return view('reghome');
+    }
+    public function register_nitt()
+    {
+        return view('register_nitt');
+    }
     public function sponsorship_opportunity()
     {
         return view('sponsorship_opportunity');
     }
+
+
+    public function LDAPfill(Request $request)
+    {
+
+        $rollno = $request->get('roll');
+
+        $ldapconn = ldap_connect("10.0.0.38")
+            or die("Could not connect to LDAP server.");
+
+        ldap_set_option($ldapconn, LDAP_OPT_PROTOCOL_VERSION, 3);
+        ldap_set_option($ldapconn, LDAP_OPT_REFERRALS, 0);
+    
+        $ldapbind = @ldap_bind($ldapconn, "CN=106114073,OU=2014,OU=UG,OU=CSE,DC=octa,DC=edu", "Password2");
+        
+        if ($ldapbind)
+        {
+            $sr=ldap_search($ldapconn,"DC=octa,DC=edu", "cn=".$rollno);
+            $ldaparr = ldap_get_entries($ldapconn,$sr); 
+
+            $name = $ldaparr[0]['displayname'][0];
+            $desc = $ldaparr[0]['description'][0];
+            
+            $distname = $ldaparr[0]['distinguishedname'][0];
+
+
+            $expdesc = explode(" ",$desc);
+            $expdistname = explode(",",$distname);
+
+            $inputlist = array(
+                'name'          => $name,
+                'degree'        => explode("=",$expdistname[2])[1],
+                'course'        => $expdesc[1],
+                'branch'        => $expdesc[2],
+                'college'       => "NIT-Trichy Tanjore Main Road,National Highway 67,Tiruchirappalli - 620015,Tamil Nadu",
+            );
+
+            // var_dump($expdesc);
+            // var_dump($expdistname);
+            // print_r($ldaparr[0]);
+            return Redirect::to('/registration/form')->with($inputlist);          
+        } 
+        else 
+        {
+            echo "LDAP bind failed...\n";
+        }
+
+
+    }
+
+
+
     public function store_registration(Request $request)
     {
         $messages = [
@@ -64,7 +124,7 @@ class HomeController extends Controller
     //redirect to registration page with errors if there is any
         if ($v->fails())
         {
-            return redirect()->back()->withErrors($v->errors())->withInput();
+            return redirect('/registration/form')->withErrors($v->errors())->withInput();
         }
 
     //else
