@@ -24,18 +24,21 @@
     <div class="col s12">
         <div class="card white" style="padding-top:0px;">
             <div class="card-content black-text ">
-                <div class="row">
-                    <div class="col s12 m12 l3">
-                        <center><img src="/images/nitlogo.png" height="170px"></center>
+                <div class="row valign-wrapper">
+                    <div class="col s12 m12 l3 valign">
+                        <center><img  src="/images/nitlogo.png" height="170px"></center>
                     </div>
-                    <div class="col s12 m12 l5" style="padding-top:40px;padding-bottom:40px;">
+                    <div class="col s12 m12 l6 valign">
                         <center>
                             <h5>SKILL ENHANCEMENT PROGRAMME</h5>
                         </center>
                     </div>
-                    <div class="col s12 m12 l4">
-                        <center><img class="responsive-img" src="/images/doms.png" height="170px"></center>
+                    <div class="col s12 m12 l3 valign">
+                        <center><img class="responsive-img" src="/images/doms.png"  height="170px"></center>
                     </div>
+                </div>
+                <div class="col s6 offset-s3">
+                    <center><h6 style="font-size:21px;"><strong>9<sup>th</sup> October</strong> (Friday) and <strong>10<sup>th</sup> October</strong> (Saturday)</h6></center>
                 </div>
             </div>
         </div>
@@ -43,7 +46,7 @@
 </div>
 <div class="row">
     <div class="col s12 m12 l6">
-        <div class="card blue lighten-3" style="min-height:290px;">
+        <div class="card " style="min-height:290px;">
             <div class="card-content black-text">
                 <br>
                 <h5>About the Programme</h5>
@@ -54,45 +57,9 @@
             </div>
         </div>
     </div>
-    <div class="col s12 m12 l6">
-        <div class="card white">
-            <div class="card-content center-align white-text red">
-                <h5>Vision</h5>
-                <hr>
-                <p>
-                To be Globally Acknowledged Business School with social relevance
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m12 l6">
-        <div class="card white">
-            <div class="card-content center-align white-text green">
-                <h5>Mission</h5>
-                <hr>
-                <p>
-                To develop managers and entrepreneurs of essence and excellence and to enrich the society through education, research and consultancy.
-                </p>
-            </div>
-        </div>
-    </div>
     
-</div>
-
-<div class="row">
     <div class="col s12 m12 l4">
-        <div style="height:230px" class="card-panel teal small">
-            <div class="card-content black-text">
-                <h5>Programme Date</h5>
-                <hr>
-                <p>
-                <strong>9 (Friday)</strong> and <strong>10 (Saturday)</strong> of <strong>October 2015</strong>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m12 l8">
-        <div style="height:230px" class="card-panel white small">
+        <div style="min-height:290px" class="card-panel white small">
             <div class="card-content black-text">
                 <h5>Contact Details</h5>
                 <hr>
@@ -104,6 +71,18 @@
                 </div>
             </div>
         </div>
+    </div>  
+
+        
+        
+        
+                <img class="col s12 m12 l2" style="margin-top: 0.5rem;
+margin-right: 0px;
+margin-bottom: 1rem;
+margin-left: 0px;" src="/images/lamp.gif" height="290px">    
+        
+        
+        
     </div>  
 </div>
 @stop

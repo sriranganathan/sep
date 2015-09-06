@@ -64,7 +64,7 @@ class HomeController extends Controller
     //redirect to registration page with errors if there is any
         if ($v->fails())
         {
-            return redirect()->back()->withErrors($v->errors());
+            return redirect()->back()->withErrors($v->errors())->withInput();
         }
 
     //else
