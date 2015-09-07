@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Validator;
 use App\registration as Registration;
+use Illuminate\Support\Facades\Session;;
+
 use Imagick;
 
 class HomeController extends Controller
@@ -32,6 +34,18 @@ class HomeController extends Controller
     }
     public function registration()
     {
+        if(Session::has('college'))
+        {
+            $count = Registration::where('isnit','=','1')->count();
+            if($count>=150)
+                return view('registrations_full');
+        }
+        else
+        {
+            $count = Registration::where('isnit','=','0')->count();
+            if($count>=150)
+                return view('registrations_full');
+        }
         return view('registration');
     }
     public function registrationshow()
@@ -40,6 +54,9 @@ class HomeController extends Controller
     }
     public function register_nitt()
     {
+        $count = Registration::where('isnit','=','1')->count();
+        if($count>=150)
+            return view('registrations_full');
         return view('register_nitt');
     }
     public function sponsorship_opportunity()
@@ -86,7 +103,7 @@ class HomeController extends Controller
             // var_dump($expdesc);
             // var_dump($expdistname);
             // print_r($ldaparr[0]);
-            return Redirect::to('/registration/form')->with($inputlist);          
+            return redirect('/registration/form')->with($inputlist);          
         } 
         else 
         {
@@ -119,6 +136,7 @@ class HomeController extends Controller
         'dd_date'       => 'required|min:10|max:30',
         'bank_name'     => 'required|min:2|max:20',
         'reason'        => 'required|min:20|max:200',
+        'isnit'         => 'required|in:0,1',
 
         ],$messages);
     //redirect to registration page with errors if there is any
@@ -128,7 +146,18 @@ class HomeController extends Controller
         }
 
     //else
-
+        if($request->isnit==1)
+        {
+            $count = Registration::where('isnit','=','1')->count();
+            if($count>=150)
+                return view('registrations_full');
+        }
+        else
+        {
+            $count = Registration::where('isnit','=','0')->count();
+            if($count>=150)
+                return view('registrations_full');
+        }
         if(strcmp($request->course,"other")==0)
             $request->course = $request->other_course;
         if(strcmp($request->degree,"UG")==0)
@@ -151,6 +180,7 @@ class HomeController extends Controller
         $registration->dd_date              = $request->dd_date;
         $registration->bank_name            = $request->bank_name;
         $registration->reason               = $request->reason;
+        $registration->isnit                = $request->isnit;
         
         //save the record to table
         $save_status = $registration->save();

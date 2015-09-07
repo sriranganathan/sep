@@ -30,6 +30,7 @@ class CreateRegistrationsTable extends Migration
             $table->string('dd_date',20);
             $table->string('bank_name',40);
             $table->string('reason',200);
+            $table->int('isnit');
         });
     }
 

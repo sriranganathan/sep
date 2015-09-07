@@ -69,16 +69,16 @@
             <div class="row">
             <div class="col s12 m4 ">
                     <div class="col s1"><i class="material-icons prefix">school</i></div>
-                    <div class="input-field col s11">
-                        <select required name="degree">
+                    <div class="input-field col s11" id="degreediv">
+                        <select id="degree" required name="degree">
                             <option value="" disabled selected>Choose your Degree</option>
-                            <option value="UG" @if(strcmp(old('degree'),"UG")==0) selected @endif>UG</option>
-                            <option value="PG" @if(strcmp(old('degree'),"PG")==0) selected @endif>PG</option>
+                            <option value="UG" @if(strcmp(old('degree'),"UG")==0) selected @endif @if(Session::has('degree')&&strcmp(Session::get('degree'),"UG")==0) selected @endif>UG</option>
+                            <option value="PG" @if(strcmp(old('degree'),"PG")==0) selected @endif @if(Session::has('degree')&&strcmp(Session::get('degree'),"PG")==0) selected @endif>PG</option>
                         </select>
                         <label>Degree</label>
                     </div>
                 </div>
-                <div class="col s12 m4">
+                <div class="col s12 m4" id="course_div">
                     <div class="col s1"><i class="material-icons prefix">book</i></div>
                     <div class="input-field col s11">
                         <select id="course" required name="course" style="overflow:scroll">
@@ -96,7 +96,13 @@
                         <label>Course</label>
                     </div>
                 </div>
-
+                
+                <div class="input-field col s11 m4 " id="other_course_div" style="display:none">
+                     <i class="material-icons prefix">book</i>
+                     <input type="text" id="other_course" name="other_course" value="{{old('other_course')}}">
+                     <label for="other_course">Please Specify Your Course</label>
+                </div>
+                
                 <div class="col s12 m4">
                     <div class="col s1"><i class="material-icons prefix">today</i></div>
                     <div class="input-field col s11">
@@ -109,11 +115,7 @@
                         <label>Year of pursuing Course</label>
                     </div>
                 </div>
-                
-                <div class="input-field col s11 m4 ">
-                    <input id="other_course" type="hidden" name="other_course" value="{{old('other_course')}}" placeholder="Please specify your Course">
-                </div>
-            </div>
+    
             <div class="row">
                 <div class="input-field col s12 m3 ">
                     <i class="material-icons prefix">description</i>
@@ -139,7 +141,9 @@
             <div class="row">
                 <div class="input-field col s12 m6 ">
                     <i class="material-icons prefix">account_balance</i>
-                    <textarea id="college" name="college"  class="materialize-textarea" length="150">{{old('college')}}</textarea>
+                    <textarea id="college" name="college"  class="materialize-textarea" length="150">
+                        {{old('college')}}
+                    </textarea>
                     <label for="college">College Name With Address</label>
                 </div>
                 <div class="input-field col s12 m6 ">
@@ -156,7 +160,7 @@
                 </div>
                 <div class="input-field col s12 m3 ">
                     <i class="material-icons prefix">today</i>
-                    <input id="dd_date" type="date" value="{{old('dd_date')}}" name="dd_date" class="validate datepicker" required>
+                    <input id="dd_date" type="date" value="{{old('dd_date')}}" name="dd_date" class="datepicker" required>
                     <label for="dd_date" class="active">DD Date</label>
                 </div>
                 <div class="input-field col s12 m6 ">
@@ -164,7 +168,10 @@
                     <input id="bank_name" value="{{old('bank_name')}}" type="text" name="bank_name" class="validate" required>
                     <label for="bank_name">Bank Name</label>
                 </div>
+
             </div>
+
+            <input name="isnit" id="isnit" value="0" type="hidden">
 
             <div class="row">
                 <div class="input-field col s12 m6 offset-s3 ">
@@ -180,7 +187,15 @@
 @section('javascript')
     $(document).ready(function(){
     $('select').material_select();
-    
+    $('#college').val("{{old('college')}}");
+    @if(Session::has('name'))
+        $('#name').attr('value','{{Session::get("name")}}');
+        $('#branch').attr('value','{{Session::get("branch")}}');
+        $('#college').val("{{Session::get('college')}}");
+        //$('#college').attr("class","materialize-textarea disabled");
+        $('#isnit').attr("value","1");
+    @endif
+
     });
     $('.select-dropdown').find('span').on('click',function(){
     $newSelect.trigger('close');
@@ -189,15 +204,13 @@
     var course = $("#course").val();
     if(course.localeCompare("other")==0)
     {
-    $("#other_course").attr("type","text");
-    }
-    else
-    {
-    $("#other_course").attr("type","hidden");
+    $("#other_course_div").css("display","inline");
+    $('#course_div').css("display","none");
     }
     });
     @if(strcmp(old('course'),"other")==0) 
-        $("#other_course").attr("type","text");
+        $("#other_course_div").css("display","inline");
+        $('#course_div').css("display","none");
     @endif
     $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
