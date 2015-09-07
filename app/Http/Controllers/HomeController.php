@@ -269,6 +269,7 @@ class HomeController extends Controller
             imagettftext($im_page_1,35,0,1130,1300+$k*50, $black, $font,$line);
             $k++;
         }
+        imagettftext($im_page_1,35,0,2050,85, $black, $font,"Reg_id : ".$registration->reg_id);
         imagettftext($im_page_1,35,0,1140,760, $black, $font,$registration->name);
         imagettftext($im_page_1,35,0,1140,850, $black, $font,$registration->gender);
         imagettftext($im_page_1,35,0,1140,940, $black, $font,$registration->degree);
