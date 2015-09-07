@@ -84,13 +84,13 @@
                         <select id="course" required name="course" style="overflow:scroll">
                             <option value="" disabled selected>Choose your Course</option>
                             <option value="B.E" @if(strcmp(old('course'),"B.E")==0) selected @endif>B.E</option>
-                            <option value="B.Tech" @if(strcmp(old('course'),"B.Tech")==0) selected @endif>B.tech</option>
+                            <option value="B.Tech" @if(strcmp(old('course'),"B.Tech")==0) selected @endif @if(Session::has('course')&&strcmp(Session::get('course'),"B.Tech")==0) selected @endif>B.tech</option>
                             <option value="B.Sc" @if(strcmp(old('course'),"B.Sc")==0) selected @endif>B.Sc</option>
                             <option value="B.A" @if(strcmp(old('course'),"B.A")==0) selected @endif>B.A</option>
                             <option value="B.Com" @if(strcmp(old('course'),"B.Com")==0) selected @endif>B.com</option>
-                            <option value="M.Tech" @if(strcmp(old('course'),"M.Tech")==0) selected @endif>M.tech</option>
+                            <option value="M.Tech" @if(strcmp(old('course'),"M.Tech")==0) selected @endif @if(Session::has('course')&&strcmp(Session::get('course'),"M.Tech")==0) selected @endif>M.tech</option>
                             <option value="M.Sc" @if(strcmp(old('course'),"M.Sc")==0) selected @endif>M.Sc</option>
-                            <option value="M.B.A" @if(strcmp(old('course'),"M.B.A")==0) selected @endif>M.B.A</option>
+                            <option value="M.B.A" @if(strcmp(old('course'),"M.B.A")==0) selected @endif @if(Session::has('course')&&strcmp(Session::get('course'),"M.B.A")==0) selected @endif>M.B.A</option>
                             <option value="other"@if(strcmp(old('course'),"other")==0) selected @endif>Others</option>
                         </select>
                         <label>Course</label>
@@ -108,9 +108,9 @@
                     <div class="input-field col s11">
                         <select id="year" required name="year">
                             <option value="" disabled selected>Year of Pursuing course</option>
-                            <option value="Final year U.G." @if(strcmp(old('year'),"Final year U.G.")==0) selected @endif>Final year U.G.</option>
-                            <option value="Final year P.G." @if(strcmp(old('year'),"Final year P.G.")==0) selected @endif>Final year P.G.</option>
-                            <option value="Pre-final year of Engineering" @if(strcmp(old('year'),"Pre-final year of Engineering")==0) selected @endif>Pre-final year of Engineering</option>
+                            <option value="Final year U.G." @if(strcmp(old('year'),"Final year U.G.")==0) selected @endif @if(Session::has('year')&&Session::get('year')==4) selected @endif>Final year U.G.</option>
+                            <option value="Final year P.G." @if(strcmp(old('year'),"Final year P.G.")==0) selected @endif @if(Session::has('year')&&Session::get('year')==-1) selected @endif>Final year P.G.</option>
+                            <option value="Pre-final year of Engineering" @if(strcmp(old('year'),"Pre-final year of Engineering")==0) selected @endif @if(Session::has('year')&&Session::get('year')<=3&&Session::get('year')>=1) selected @endif>Pre-final year of Engineering</option>
                         </select>
                         <label>Year of pursuing Course</label>
                     </div>

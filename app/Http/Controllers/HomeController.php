@@ -8,7 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Validator;
 use App\registration as Registration;
-use Illuminate\Support\Facades\Session;;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Http\Response;
 
 use Imagick;
 
@@ -83,11 +84,30 @@ class HomeController extends Controller
             $sr=ldap_search($ldapconn,"DC=octa,DC=edu", "cn=".$rollno);
             $ldaparr = ldap_get_entries($ldapconn,$sr); 
 
+            if($ldaparr['count']==0)
+                return redirect('/registration/nitt')->with("message","Not a Valid Roll Number");
             $name = $ldaparr[0]['displayname'][0];
             $desc = $ldaparr[0]['description'][0];
             
             $distname = $ldaparr[0]['distinguishedname'][0];
 
+            $deg_no = (int)($rollno/100000000);
+            $year_no = (int)(($rollno%100000)/1000);
+            if($deg_no == 1)
+            {
+                $course = "B.Tech";
+                $year = 16 - $year_no;
+            }
+            else if($deg_no == 2)
+            {  
+                $course = "M.Tech";
+                $year=-1;
+            }
+            else
+            {
+                $course = "M.B.A";
+                $year = -1;
+            }    
 
             $expdesc = explode(" ",$desc);
             $expdistname = explode(",",$distname);
@@ -95,9 +115,10 @@ class HomeController extends Controller
             $inputlist = array(
                 'name'          => $name,
                 'degree'        => explode("=",$expdistname[2])[1],
-                'course'        => $expdesc[1],
-                'branch'        => $expdesc[2],
+                'course'        => $course,
+                'branch'        => "",
                 'college'       => "NIT-Trichy Tanjore Main Road,National Highway 67,Tiruchirappalli - 620015,Tamil Nadu",
+                'year'          => $year
             );
 
             // var_dump($expdesc);
@@ -128,14 +149,14 @@ class HomeController extends Controller
         'other_course'  => 'required_if:course,other',
         'year'          => 'required|in:Final year U.G.,Final year P.G.,Pre-final year of Engineering',
         'branch'        => 'required|min:2|max:20',
-        'college'       => 'required|min:10|max:150',
+        'college'       => 'required|max:150',
         'email'         => 'required|email|unique:registrations',
         'phone'         => 'required|integer|digits_between:10,10',
         'guardian_phone'=> 'required|integer|digits_between:10,10',
-        'dd_no'         => 'required|min:5|max:10',
+        'dd_no'         => 'required|max:20',
         'dd_date'       => 'required|min:10|max:30',
-        'bank_name'     => 'required|min:2|max:20',
-        'reason'        => 'required|min:20|max:200',
+        'bank_name'     => 'required|min:2|max:30',
+        'reason'        => 'required|max:200',
         'isnit'         => 'required|in:0,1',
 
         ],$messages);
@@ -165,7 +186,7 @@ class HomeController extends Controller
         else
             $amount = 1560;
         $registration                       = new Registration();
-        $registration->name                 = $request->name;
+        $registration->name                 = strtoupper($request->name);
         $registration->gender               = $request->gender; 
         $registration->degree               = $request->degree;
         $registration->course               = $request->course;
@@ -202,6 +223,30 @@ class HomeController extends Controller
         $font = $path.'/font/Helvetica.otf';
         $d = strtotime("now");
         $today = date("d-m-Y", $d);
+        $dd_timestamp = strtotime($registration->dd_date);
+        $dd_date = date("d-m-Y",$dd_timestamp);
+        $reason = $registration->reason;
+        $words = explode(" ", $reason);
+        $lines = [""];
+        $k=0;
+        foreach($words as $word)
+        {
+            if(strlen($lines[$k]) + strlen($word) <= 50)
+                $lines[$k].=" ".$word;
+            else
+            {
+                $k++;
+                $lines[$k]="";
+                $lines[$k].=" ".$word;
+            }
+
+        }
+        $k=0;
+        foreach($lines as $line)
+        {
+            imagettftext($im_page_1,35,0,1130,2110+$k*50, $black, $font,$line);
+            $k++;
+        }
         $college = $registration->college_address;
         $words = explode(" ", $college);
         $lines = [""];
@@ -221,14 +266,26 @@ class HomeController extends Controller
         $k=0;
         foreach($lines as $line)
         {
-            imagettftext($im_page_1,35,0,740,1475+$k*50, $black, $font,$line);
+            imagettftext($im_page_1,35,0,1130,1300+$k*50, $black, $font,$line);
             $k++;
         }
-        imagettftext($im_page_1,35,0,2000,1065, $black, $font,$registration->reg_id);
-        imagettftext($im_page_1,35,0,750,1325, $black, $font,$registration->name);
-        imagettftext($im_page_1,35,0,750,1625, $black, $font,$registration->degree);
-        imagettftext($im_page_1,35,0,750,1775, $black, $font,$registration->course);
-        imagettftext($im_page_1,35,0,540,2175, $black, $font,$today);
+        imagettftext($im_page_1,35,0,1140,760, $black, $font,$registration->name);
+        imagettftext($im_page_1,35,0,1140,850, $black, $font,$registration->gender);
+        imagettftext($im_page_1,35,0,1140,940, $black, $font,$registration->degree);
+        imagettftext($im_page_1,35,0,1140,1030, $black, $font,$registration->course);
+        imagettftext($im_page_1,35,0,1140,1120, $black, $font,$registration->year);
+        imagettftext($im_page_1,35,0,1140,1210, $black, $font,$registration->dept);
+        imagettftext($im_page_1,35,0,1140,1480, $black, $font,$registration->email);
+        imagettftext($im_page_1,35,0,1140,1570, $black, $font,$registration->mobile_no);
+        imagettftext($im_page_1,35,0,1140,1660, $black, $font,$registration->guardian_mobile_no);
+        imagettftext($im_page_1,35,0,1140,1750, $black, $font,$registration->amount);
+        imagettftext($im_page_1,35,0,1140,1840, $black, $font,$registration->dd_no);
+        imagettftext($im_page_1,35,0,1140,1930, $black, $font,$dd_date);
+        imagettftext($im_page_1,35,0,1140,2020, $black, $font,$registration->bank_name);
+
+
+        
+        imagettftext($im_page_1,35,0,860,2800, $black, $font,$today);
         $filename_page_1 = $registration->reg_id.".png";
         imagepng($im_page_1,$filename_page_1);
 
@@ -240,14 +297,16 @@ class HomeController extends Controller
             die('Could not write!');
         }
 
-
-        header('Content-Type: application/pdf');
-        header("Content-Disposition: inline; filename=".$filename_pdf);
-        @readfile($filename_pdf);
-
         $delete_status_page_1 = unlink($filename_page_1);
-        $delete_status_pdf = unlink($filename_pdf);
+        Session::put('filename', $filename_pdf);
+        return view('/registration_successful');
 
+    }
+
+    public function download()
+    {
+        $filename = Session::get('filename');
+        return response()->download($filename);
     }
     
 

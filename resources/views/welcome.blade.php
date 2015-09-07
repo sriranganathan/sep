@@ -59,13 +59,14 @@
     </div>
     
     <div class="col s12 m12 l4">
-        <div style="min-height:290px" class="card-panel white small">
+        <div style="min-height:290px" class="card white">
             <div class="card-content black-text">
-                <h5>Contact Details</h5>
-                <hr>
+                <h5>Programme Co-ordinator :</h5>
+                <br>
                 <div>
                 <h6>Dr.G.MURUGANANTHAM</h6>
                 <p>MBA Dept, NIT -Trichy, 620015.</p>
+                <hr>
                 <p>Mobile&nbsp;:&nbsp;9865175135</p>
                 <p>Email &nbsp;:&nbsp;marcon@nitt.edu</p>
                 </div>

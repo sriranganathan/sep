@@ -21,5 +21,13 @@
     <li  class="active"><a href="/sponsorship_opportunity">Sponsorship Opportunity </a></li>
 @stop
 @section('content')
-<p>Coming soon</p>   
+<div class="row">
+    <div class="card-panel white z-depth-4">
+    <center>
+        <p style="font-size:21px;line-height:30px">
+            Business organizations, Retailers and Individuals who are interested in sponsoring for various activities during the SEP for mutual benefits may please contact the Programme Co-ordinator.
+        </p>
+    </center>
+    </div>
+</div>
 @stop

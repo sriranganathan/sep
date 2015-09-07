@@ -16,14 +16,15 @@ Route::get('/area_of_training'			,'HomeController@area_of_training');
 Route::get('/target_audience'			,'HomeController@target_audience');
 Route::get('/resource_person'			,'HomeController@resource_person');
 Route::get('/registration'	    	    ,'HomeController@registrationshow');
+Route::get('/sponsorship_opportunity'	,'HomeController@sponsorship_opportunity');
 
 Route::get('/registration/nitt'	    	,'HomeController@register_nitt');
 Route::post('/registration/nitt'	    ,'HomeController@LDAPfill');
 
 
 Route::get('/registration/form'	    	,'HomeController@registration');
-Route::get('/sponsorship_opportunity'	,'HomeController@sponsorship_opportunity');
 Route::post('/registration/form'		,'HomeController@store_registration');
+Route::get('/registration/download'	    ,'HomeController@download');
 
 Route::get('/login'                     ,'AdminController@login');
 Route::post('/login'                    ,'AdminController@check_login');
