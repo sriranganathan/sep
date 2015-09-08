@@ -210,7 +210,10 @@ class HomeController extends Controller
             return redirect('/registration');
         }
         //update the reg_id of the inserted record
-        $registration->reg_id               = $registration->id+1000;
+        if($registration->isnit==1)
+        $registration->reg_id               = "N".$registration->id;
+        else
+        $registration->reg_id               = "O".$registration->id;
         $registration->save();
 
 
