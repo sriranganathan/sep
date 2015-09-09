@@ -54,7 +54,7 @@
             <footer class="blue page-footer">
                 <div class="footer-copyright">
                     <div class="row">
-                        <a class="grey-text text-lighten-4 col s8">Developed by - Vignesh M , Gokul Srinivas and R Sriranganathan</a>
+                        <a class="grey-text text-lighten-4 col s8">Developed by - Vignesh M , Gokul Srinivas , R Sriranganathan, Phalguni Das, Arun and Yassar</a>
                         <a class="grey-text text-lighten-4 col s4 right-align" href="http://domsnitt.in" target="_blank">&copy;DoMS</a>
                     </div>
                 </div>
