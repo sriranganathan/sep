@@ -25,12 +25,12 @@
 <div class="row">
     <div class="col s12 card">
             <center><h4>Target Audience</h4></center>
-            <center><img class="responsive-img" src="images/libraryj.jpg" width=400px height=auto></center>
             <ul class="collection">
                 <li class="collection-item">UG - Final year students of Engineering, Arts and Science disciplines.</li>
                 <li class="collection-item">Second year PG students of M.Tech, MBA, M.Sc, and other P.G courses.</li>
                 <li class="collection-item">Pre-final year engineering students are also encouraged to apply.</li>
             </ul>
+            <center><img class="responsive-img" src="images/libraryj.jpg" width=400px height=auto></center>
     </div>
 {{-- 
     <div class="col s12">

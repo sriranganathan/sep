@@ -24,10 +24,10 @@
 <div class="row">
     <div class="card-panel white z-depth-4">
     <center>
-        <center><img class="responsive-img" src="images/garnet.jpg" width=400px height=auto></center>
         <p style="font-size:21px;line-height:30px">
             Business organizations, Retailers and Individuals who are interested in sponsoring for various activities during the SEP for mutual benefits may please contact the Programme Co-ordinator.
         </p>
+        <center><img class="responsive-img" src="images/garnet.jpg" width=400px height=auto></center>
     </center>
     </div>
 </div>
