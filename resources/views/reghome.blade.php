@@ -45,7 +45,7 @@
                         </li>
                     </ul>
                     <p>
-                        The registration fee should be paid through a DD in favour of  “The Director, NIT, Trichy” taken from any Nationalsed bank.
+                        The registration fee should be paid through a DD in favour of  "The Director, NIT, Trichy" taken from any nationalised bank.
 
                         The registration fee is inclusive of programme kit, refreshments and lunch. Selection of the applicant is based on First Come First Serve basis.
                         <br>
@@ -84,13 +84,13 @@
                 <div class="card-content">
                     Note:<br> 
                     At the end of the online registration, after submit, A4 format registration form will be generated.
-                    Registration form along with DD is to be send to the below mentioned address through Speed post.
+                    Registration form along with DD is to be sent to the below mentioned address through Speed post.
                     <br><br>
                     Dr.G.MURUGANANTHAM.<br>
                     Programme Coordinator,<br>
                     MBA Dept, NIT Trichy - 620 015.
                     <br><br>
-                    Confirmation of registration will be send to your mail id after receiving the DD. 
+                    Confirmation of registration will be sent to your mail ID after receiving the DD. 
                 </div>
             </div>
         </div>
