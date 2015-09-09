@@ -54,9 +54,8 @@
             <footer class="blue page-footer">
                 <div class="footer-copyright">
                     <div class="row">
-                        <a class="grey-text text-lighten-4 col s4" href="http://domsnitt.in" target="_blank">&copy;DoMS</a>
-                        <a class="grey-text text-lighten-4 col s4 center" href="http://www.nitt.edu" target="_blank">NIT Trichy</a>
-                        <a class="grey-text text-lighten-4 col s4 right-align" href="http://delta.nitt.edu" target="_blank">Delta Force</a>
+                        <a class="grey-text text-lighten-4 col s8">Developed by - Vignesh M , Gokul Srinivas and R Sriranganathan</a>
+                        <a class="grey-text text-lighten-4 col s4 right-align" href="http://domsnitt.in" target="_blank">&copy;DoMS</a>
                     </div>
                 </div>
         </footer>

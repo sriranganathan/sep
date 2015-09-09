@@ -36,6 +36,14 @@
             <div class="card">
                 <div class="card-content">
                   <span class="card-title black-text">Register for the Programme</span>
+                    <ul>
+                        <li>
+                            <strong>For UG Students: Rs 800 + 20 % institute overheads, including service tax = Rs 960/-</strong>
+                        </li>
+                        <li>
+                            <strong>For PG Students: Rs 1300 + 20 % institute overheads, including service tax = Rs 1560/-</strong>
+                        </li>
+                    </ul>
                     <p>
                     The registration fee should be paid through a DD in favour of  “The Director, NIT, Trichy” taken from any Nationalsed bank.
 
@@ -45,16 +53,6 @@
 
                     Please have the details of your DD while registering.
                     </p>
-                    
-                    <ul>
-                        <li class="collection-item">
-                            For UG Students: Rs 800 + 20 % institute overheads, including service tax = Rs 960/-
-                        </li>
-                        <li class="collection-item">
-                            For PG Students: Rs 1300 + 20 % institute overheads, including service tax = Rs 1560/-
-                        </li>
-                    </ul>
-                
                 </div>
                 <div class="card-action">
                     <div class="row">

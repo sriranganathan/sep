@@ -28,7 +28,7 @@
     <div class="card-panel white z-depth-4">
     <center>
         <p style="font-size:21px;line-height:30px">
-            Be ready to listen and enjoy,12 plus Resource Persons from differnet sectors.
+            Be ready to listen and enjoy,10 plus Resource Persons from differnet sectors.
         </p>
         <p style="font-size:21px;line-height:30px">
             List of Resource persons will be uploaded shortly.
