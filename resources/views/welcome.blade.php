@@ -5,19 +5,19 @@
 
 @section('nav-bar')
     <li class="active"><a href="/" class="waves-effect waves-light">Home</a></li>
-    <li><a href="/area_of_training" class=" waves-effect waves-light">Area Of Training</a></li>
+    <li><a href="/area_of_training" class=" waves-effect waves-light">Area of Training</a></li>
     <li><a href="/target_audience" class=" waves-effect waves-light">Target Audience</a></li>
     <li><a href="/resource_person" class=" waves-effect waves-light">Resource Person</a></li>
     <li><a href="/registration" class=" waves-effect waves-light">Registration</a></li>
-    <li><a href="/sponsorship_opportunity" class=" waves-effect waves-light">Sponsorship Opportunity </a></li>
+    <li><a href="/sponsorship_opportunity" class=" waves-effect waves-light">Sponsorship Opportunity</a></li>
 @stop
 @section('side-nav')
     <li class="active"><a href="/">Home</a></li>
-    <li><a href="/area_of_training">Area Of Training</a></li>
-    <li><a href="/target_audience">Target_Audience</a></li>
+    <li><a href="/area_of_training">Area of Training</a></li>
+    <li><a href="/target_audience">Target Audience</a></li>
     <li><a href="/resource_person">Resource Person</a></li>
     <li><a href="/registration">Registration</a></li>
-    <li><a href="/sponsorship_opportunity">Sponsorship Opportunity </a></li>
+    <li><a href="/sponsorship_opportunity">Sponsorship Opportunity</a></li>
 @stop
 @section('content')
     <div class="row">
@@ -58,7 +58,7 @@
     </div>
     <div class="row">
         <div class="col s10">
-            <div class="card " style="min-height:290px;">
+            <div class="card " style="min-height:250px;">
                 <div class="card-content black-text">
                     <br>
                     <h5>About the Programme</h5>
@@ -70,13 +70,13 @@
             </div>
         </div>
         <img class="col s2" style="margin-top: 0.5rem;
-                                           margin-right: 0px;
-                                           margin-bottom: 1rem;
-                                           margin-left: 0px;" src="/images/lamp.gif" height="290px">    
+                                   margin-right: 0px;
+                                   margin-bottom: 1rem;
+                                   margin-left: 0px;" src="/images/lamp.gif" height="250px">    
     </div>  
     <div class="row">
-        <div class="col s5 offset-s8">
-            <div style="min-height:200px" class="card white">
+        <div class="col s5 offset-s7">
+            <div  class="card white">
                 <div class="card-content black-text">
                     <h5>Programme Co-ordinator</h5>
                     <div>
