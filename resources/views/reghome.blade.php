@@ -32,7 +32,7 @@
 @section('content')
     
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12">
             <div class="card">
                 <div class="card-content">
                     <span class="card-title black-text">Register for the Programme</span>
@@ -79,7 +79,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12">
             <div class="card">
                 <div class="card-content">
                     Note:<br> 
