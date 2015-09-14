@@ -33,4 +33,5 @@ Route::group(['middleware' => 'adminauth'], function () {
 Route::get('/view_registration'         ,'AdminController@view');
 Route::post('/show_registration'        ,'AdminController@show_registration');
 Route::get('/logout'                    ,'AdminController@logout');
+Route::post('/email'					,'AdminController@email');
 });

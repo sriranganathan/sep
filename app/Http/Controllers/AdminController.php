@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\registration as Registration;
+use Mail;
 
 class AdminController extends Controller
 {
@@ -56,5 +57,15 @@ class AdminController extends Controller
     {
         Session::flush();
        return Redirect::to('/view_registration');
+    }
+
+    public function email(Request $request)
+    {
+        $id = $request->get('id');
+        $registration = Registration::find($id);
+
+        Mail::send('email', ['registrant' => $registration->name], function ($m) use ($registration) {
+            $m->to($registration->email,$registration->name)->subject('Skill Enhancement Programme Registration Confirmed !!');
+        });
     }
 }

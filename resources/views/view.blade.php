@@ -68,6 +68,7 @@ View Registration
     </div>
     <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+      <button class="waves-effect waves-light btn id_for_email">Send Email</button>
     </div>
 </div>
 @stop
@@ -90,7 +91,22 @@ $(document).ready(function(){
  
   });
 
+   $('.id_for_email').click(function(){
+    var id = this.id;
+    $.ajax({
+        method: "POST",
+        url: base_url+"/email",
+        data: {id :id }
+    }).done(function( msg ) {
+        alert("E-Mail Sent");
+    });
+ 
   });
+
+
+  });
+
+
  function modalInject(json)
 {
     $('#reg_id').html("<strong>REGISTRATION ID</strong> : "+json.reg_id);
@@ -108,6 +124,7 @@ $(document).ready(function(){
     $('#dd_date').html("<strong>DD Date : </strong>"+json.dd_date);
     $('#bank_name').html("<strong>Bank Name : </strong>"+json.bank_name);
     $('#reason').html("<strong>Reason : </strong>"+json.reason);
+    $('.id_for_email').attr('id',json.id);
     $('#modal1').openModal();
 }
 
