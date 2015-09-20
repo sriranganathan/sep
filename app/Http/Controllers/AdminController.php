@@ -68,4 +68,12 @@ class AdminController extends Controller
             $m->to($registration->email,$registration->name)->subject('Skill Enhancement Programme Registration Confirmed !!');
         });
     }
+
+    public function test_email()
+    {
+
+        Mail::send('email', ['registrant' => 'MANIX'], function ($m) {
+            $m->to('vigneshmanix@gmail.com','MANIX')->subject('Skill Enhancement Programme Registration Confirmed !!');
+        });
+    }
 }

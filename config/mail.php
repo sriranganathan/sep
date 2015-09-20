@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'someone@some.com', 'name' => 'someone'],
+    'from' => ['address' => env('SENDER_EMAIL'), 'name' => env('SENDER_NAME')],
 
     /*
     |--------------------------------------------------------------------------
