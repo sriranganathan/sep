@@ -49,9 +49,13 @@
 
                         The registration fee is inclusive of programme kit, refreshments and lunch. Selection of the applicant is based on First Come First Serve basis.
                         <br>
-                        <strong style="font-size: large;">Participation Certificate will be given to all the registered candidates.</strong>
+                        <strong style="font-size: large;">Participation Certificate will be given to all the registered candidates</strong>
                         <br>
-                        <strong style="font-size: large;">Kindly apply at the earliest.</strong>
+                        <strong style="font-size: large;">Kindly apply at the earliest</strong>
+                        <br>
+                        <strong style="font-size: large;">No spot registration</strong>
+                        <br>
+                        <center><strong style="font-size: large;">Last date for registration: 6 October 2015</strong></center>
                         <br>
                         Please have the details of your DD while registering.
                     </p>
