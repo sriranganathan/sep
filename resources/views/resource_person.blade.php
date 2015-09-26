@@ -34,197 +34,136 @@
         </div>
     </div>   
     <div class="row">
-        <div class="col s12 m6 l3">
-            <div class="card">    
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/image1.jpg" height="auto" width="337px">
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Dr. Srinivasan Sundarrajan<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Dr. Srinivasan Sundarrajan<i class="material-icons right">close</i></span>
-                    <p>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Dr. Srinivasan Sundarrajan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image1.jpg">
+                    <div class="col s8 ">
                         Director, NIT Trichy. Former Missile Scientist at DRDO
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l3">
-            <div class="card">    
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/image2.jpeg" height="auto" width="337px">
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mr. Ravi Kumar<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mr. Ravi Kumar<i class="material-icons right">close</i></span>
-                    <p>
-                        Chairman, Zanec Ltd, India, USA, UK
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l3">
-            <div class="card">    
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/image3.jpg" height="auto" width="337px">
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mr. Soma Valliappan<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mr. Soma Valliappan<i class="material-icons right">close</i></span>
-                    <p>
-                        Writer, Motivational Speaker, Trainer, HR Consultant <br/>
-                        Menmai Management Consultancy Services, Chennai
-                    </p>
-                    <div class="card-action">
-                        <a href="http://www.writersomavalliappan.com" target="_blank" class="blue-text">More Info</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
-            <div class="card">    
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/image9.jpg" height="auto" width="337px">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. Ravi Kumar</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image2.jpeg">
+                    <div class="col s8 ">
+                        <p>Chairman, Zanec Ltd, India, USA, UK</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mr. V. Pandirajan<i class="material-icons right">more_vert</i></span>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. Soma Valliappan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image3.jpg">
+                    <div class="col s8 ">
+                       Writer, Motivational Speaker, Trainer, HR Consultant <br/>
+                       Menmai Management Consultancy Services, Chennai
+                    </div>
                 </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mr. V. Pandirajan<i class="material-icons right">close</i></span>
-                    <p>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. V. Pandirajan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image9.jpg">
+                    <div class="col s8 ">
                         IRS, Deputy Director, Directorate General of Central Excise Intelligence, Calcutta
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l3">
-            <div class="card">    
-                <div class="card-image waves-effect waves-block waves-light">
-                    <center><img class="activator" src="images/image7.jpeg" width="337px"></center>
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mr. Mukundha Krishnan<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mr. Mukundha Krishnan<i class="material-icons right">close</i></span>
-                    <p>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. Mukundha Krishnan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image7.jpeg">
+                    <div class="col s8 ">
                         Holistic Healing Consultant and Yoga Guru, Madurai
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l4">
             <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/image4.jpg" height="auto" width="337px">
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Dr. B. Vinodh<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Dr. B. Vinodh<i class="material-icons right">close</i></span>
-                    <p>
+                <h5 class="col s12 center-align">Dr. B. Vinodh</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image4.jpg">
+                    <div class="col s8 ">
                         Faculty, Dept of Humanities, NIT-Trichy
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
-            <div class="card"> 
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/image10.jpg" height="auto" width="337px">
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mr. B.T.Bangera<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mr. B.T.Bangera<i class="material-icons right">close</i></span>
-                    <p>
-                        MD, Hi-Tech Arai Pvt Ltd, Madurai (Alumnus of IIM-A)
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l3">
-            <div class="card">    
-                <div class="card-image waves-effect waves-block waves-light">
-                    <center><img class="activator" src="images/image8.jpeg" height="auto" width="337px"><center>
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mrs. Anuradha Nagarajan<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mrs. Anuradha Nagarajan<i class="material-icons right">close</i></span>
-                    <p>
-                        HR Consultant, Chennai
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l3">
+        <div class="col s12 m6 l4">
             <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <center><img class="activator" src="images/image5.jpeg" height="auto" width="337px"></center>
+                <h5 class="col s12 center-align">Mr. B.T.Bangera</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image10.jpg">
+                    <div class="col s8 ">
+                        MD, Hi-Tech Arai Pvt Ltd, Madurai (Alumnus of IIM-A)
+                    </div>
                 </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Dr. K. Ganesh<i class="material-icons right">more_vert</i></span>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mrs. Anuradha Nagarajan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image8.jpeg">
+                    <div class="col s8 ">
+                        HR Consultant, Chennai
+                    </div>
                 </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Dr. K. Ganesh<i class="material-icons right">close</i></span>
-                    <p>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Dr. K. Ganesh</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image5.jpeg">
+                    <div class="col s8 ">
                         Knowledge Expert, McKinsey & Company, Inc. Chennai (Alumnus of NIT Trichy and IIT-Madras)
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
-            <div class="card">    
-                <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="images/image6.jpeg" height="auto" width="337px">
-                </div>
-                <div class="card-content">
-                    <span class="card-title black-text activator">Dr. G. Muruganantham<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Dr. G. Muruganantham<i class="material-icons right">close</i></span>
-                    <p>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Dr. G. Muruganantham</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image6.jpeg">
+                    <div class="col s8 ">
                         Faculty, Dept of Management Studies, NIT Trichy<br/>
-                        Teaching, Research and Consultancy interest includes Branding, Consumer Insight and Quality Management. <br/>
+                        Teaching, Research and Consultancy interest includes Branding, Consumer Insight and Quality Management.<br/>
                         Corporate Trainer and Serving as a mentor to Students<br/>
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
-            <div class="card" style="min-height: 200px;">    
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mr. A. S. Samad<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mr. A. S. Samad<i class="material-icons right">close</i></span>
-                    <p>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. A. S. Samad</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <div class="col s12 ">
                         AGM-HR, BHEL-Trichy
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s12 m6 l3">
-            <div class="card" style="min-height: 200px;">    
-                <div class="card-content">
-                    <span class="card-title black-text activator">Mr. Ramnath<i class="material-icons right">more_vert</i></span>
-                </div>
-                <div class="card-reveal">
-                    <span class="card-title black-text">Mr. Ramnath<i class="material-icons right">close</i></span>
-                    <p>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. Ramnath</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <div class="col s12 ">
                         Senior HR Manager, Perfetti Van Melle India Pvt Ltd, Chennai
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

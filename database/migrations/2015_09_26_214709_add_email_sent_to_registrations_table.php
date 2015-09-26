@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIsnitToRegistrationsTable extends Migration
+class AddEmailSentToRegistrationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddIsnitToRegistrationsTable extends Migration
     public function up()
     {
         Schema::table('registrations', function ($table) {
-        $table->TinyInteger('isnit')->default(0);
+        $table->boolean('email_sent')->default(false);
         });
-
     }
 
     /**
@@ -26,7 +25,7 @@ class AddIsnitToRegistrationsTable extends Migration
     public function down()
     {
         /*Schema::table('registrations', function ($table) {
-        $table->dropColumn('isnit');
+        $table->dropColumn('email_sent');
         });*/
     }
 }

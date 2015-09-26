@@ -31,6 +31,7 @@ View Registration
               <th data-field="id">Reg_id</th>
               <th data-field="name">Name</th>
               <th data-field="degree">Degree</th>
+              <th data-field="email_sent">Email Sent</th>
           </tr>
         </thead>
 
@@ -40,6 +41,13 @@ View Registration
             <td>{{$registration->reg_id}}</td>
             <td>{{$registration->name}}</td>
             <td>{{$registration->degree}}</td>
+            <td class="email_sent_field">
+              @if($registration->email_sent == 1)
+              ✔
+              @else
+              ✗
+              @endif
+            </td>
             </tr>
 		 	@endforeach
         </tbody>
@@ -99,6 +107,7 @@ $(document).ready(function(){
         data: {id :id }
     }).done(function( msg ) {
         alert("E-Mail Sent");
+        $("#"+id+" .email_sent_field").html('✔');
     });
  
   });
