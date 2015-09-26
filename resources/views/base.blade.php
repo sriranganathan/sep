@@ -38,6 +38,7 @@
             <div class="container-fluid">
                 <nav>
                     <div class="nav-wrapper blue white-text" >
+                        <a href="/" class="brand-logo"><img src="images/nitt.png" style="height: 64px;"></a>
                         <a href="#" data-activates="mobile-nav" class="waves-effect button-collapse right" style="padding:0 10px"><i class=" mdi-navigation-menu"></i></a>
                         <ul class="nav-mobile right hide-on-med-and-down">
                             @yield('nav-bar')
