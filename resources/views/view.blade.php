@@ -124,7 +124,7 @@ $(document).ready(function(){
     $('#degree').html("<strong>Degree : </strong>"+json.degree);
     $('#course').html("<strong>Course : </strong>"+json.course);
     $('#year').html("<strong>Year : </strong>"+json.year);
-    $('#College').html("<strong>College : </strong>"+json.college_address);
+    $('#college').html("<strong>College : </strong>"+json.college_address);
     $('#email').html("<strong>Email : </strong>"+json.email);
     $('#mobile').html("<strong>Mobile no : </strong>"+json.mobile_no);
     $('#guardian_mobile').html("<strong>Guardian Mobile No : </strong>"+json.guardian_mobile_no);

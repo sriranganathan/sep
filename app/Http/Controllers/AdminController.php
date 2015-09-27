@@ -16,7 +16,7 @@ class AdminController extends Controller
 {
     public function view()
     {
-        $registrations = registration::paginate(10);
+        $registrations = registration::paginate(50);
         return view('view', compact('registrations'));
     }
 
