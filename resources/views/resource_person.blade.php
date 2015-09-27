@@ -70,55 +70,11 @@
         </div>
         <div class="col s12 m6 l4">
             <div class="card">
-                <h5 class="col s12 center-align">Mr. V. Pandirajan</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " src="images/image9.jpg">
-                    <div class="col s8 ">
-                        IRS, Deputy Director, Directorate General of Central Excise Intelligence, Calcutta
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Mr. Mukundha Krishnan</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " src="images/image7.jpeg">
-                    <div class="col s8 ">
-                        Holistic Healing Consultant and Yoga Guru, Madurai
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
                 <h5 class="col s12 center-align">Dr. B. Vinodh</h5>
                 <div class="col s12 " style="min-height:120px;">
                     <img class="col s4 " src="images/image4.jpg">
                     <div class="col s8 ">
                         Faculty, Dept of Humanities, NIT-Trichy
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Mr. B.T.Bangera</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " src="images/image10.jpg">
-                    <div class="col s8 ">
-                        MD, Hi-Tech Arai Pvt Ltd, Madurai (Alumnus of IIM-A)
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Mrs. Anuradha Nagarajan</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " src="images/image8.jpeg">
-                    <div class="col s8 ">
-                        HR Consultant, Chennai
                     </div>
                 </div>
             </div>
@@ -143,6 +99,50 @@
                         Faculty, Dept of Management Studies, NIT Trichy<br/>
                         Teaching, Research and Consultancy interest includes Branding, Consumer Insight and Quality Management.<br/>
                         Corporate Trainer and Serving as a mentor to Students<br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. Mukundha Krishnan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image7.jpeg">
+                    <div class="col s8 ">
+                        Holistic Healing Consultant and Yoga Guru, Madurai
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mrs. Anuradha Nagarajan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image8.jpeg">
+                    <div class="col s8 ">
+                        HR Consultant, Chennai
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. V. Pandirajan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image9.jpg">
+                    <div class="col s8 ">
+                        IRS, Deputy Director, Directorate General of Central Excise Intelligence, Calcutta
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. B.T.Bangera</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " src="images/image10.jpg">
+                    <div class="col s8 ">
+                        MD, Hi-Tech Arai Pvt Ltd, Madurai (Alumnus of IIM-A)
                     </div>
                 </div>
             </div>
