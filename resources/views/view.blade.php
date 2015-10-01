@@ -25,7 +25,7 @@ View Registration
     <li><a href="/logout">Logout</a></li>
 @stop
 @section('content')
-<table id="registration_list">
+<table id="registration_list" class="striped bordered">
         <thead>
           <tr>
               <th data-field="id">Reg_id</th>

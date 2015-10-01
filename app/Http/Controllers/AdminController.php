@@ -78,7 +78,7 @@ class AdminController extends Controller
     {
 
         Mail::send('email', ['registrant' => 'MURUGANANTHAM' , 'id' => '8888'], function ($m) {
-            $m->to('murugan@nitt.edu','MURUGANANTHAM')
+            $m->to('107112101@nitt.edu','MURUGANANTHAM')
               ->replyTo('marcon@nitt.edu','MURUGANANTHAM')
               ->subject('Confirmation of Participation for the SEP - NIT Trichy');
         });
