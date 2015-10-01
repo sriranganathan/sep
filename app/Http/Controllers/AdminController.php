@@ -64,8 +64,10 @@ class AdminController extends Controller
         $id = $request->get('id');
         $registration = Registration::find($id);
 
-        Mail::send('email', ['registrant' => $registration->name], function ($m) use ($registration) {
-            $m->to($registration->email,$registration->name)->subject('Skill Enhancement Programme Registration Confirmed !!');
+        Mail::send('email', ['registrant' => $registration->name , 'id' => $id], function ($m) use ($registration) {
+            $m->to($registration->email,$registration->name)
+              ->replyTo('marcon@nitt.edu','MURUGANANTHAM')
+              ->subject('Confirmation of Participation for the SEP - NIT Trichy');
         });
 
         $registration->email_sent = true;
@@ -75,8 +77,10 @@ class AdminController extends Controller
     public function test_email()
     {
 
-        Mail::send('email', ['registrant' => 'MANIX'], function ($m) {
-            $m->to('vigneshmanix@gmail.com','MANIX')->subject('Skill Enhancement Programme Registration Confirmed !!');
+        Mail::send('email', ['registrant' => 'MURUGANANTHAM' , 'id' => '8888'], function ($m) {
+            $m->to('murugan@nitt.edu','MURUGANANTHAM')
+              ->replyTo('marcon@nitt.edu','MURUGANANTHAM')
+              ->subject('Confirmation of Participation for the SEP - NIT Trichy');
         });
     }
 }

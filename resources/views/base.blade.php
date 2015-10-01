@@ -23,8 +23,8 @@
          }
          .container-fluid
          {
-             width:80%;
-             margin-left:10%;
+             width:90%;
+             margin-left:5%;
          }
          nav > div > ul > li.active
          {
