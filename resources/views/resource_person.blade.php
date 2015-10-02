@@ -28,11 +28,11 @@
         <div class="card-panel white z-depth-4">
             <center>
                 <p style="font-size:21px;line-height:30px">
-                    Sessions will be handled by Thought Leaders, Senior HR Managers, Career Consultant, Psychiatrist, Practicing Managers, Successful Entrepreneur and Academicians. 
+                    Sessions will be handled by Thought Leaders, Senior HR Managers, Career Consultant, Psychiatrist, Practicing Managers, Successful Entrepreneur and Academicians.
                 </p>
             </center>
         </div>
-    </div>   
+    </div>
     <div class="row">
         <div class="col s12 m6 l4">
             <div class="card">
@@ -62,76 +62,9 @@
                 <div class="col s12 " style="min-height:120px;">
                     <img class="col s4 " style = "max-width:105px;" src="images/image3.jpg">
                     <div class="col s8 ">
-                       Writer, Motivational Speaker, Trainer, HR Consultant <br/>
-                       Menmai Management Consultancy Services, Chennai
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Dr. B. Vinodh</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " style = "max-width:105px;" src="images/image4.jpg">
-                    <div class="col s8 ">
-                        Faculty, Dept of Humanities, NIT-Trichy
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Dr. K. Ganesh</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " style = "max-width:105px;" src="images/image5.jpeg">
-                    <div class="col s8 ">
-                        Knowledge Expert, McKinsey & Company, Inc. Chennai (Alumnus of NIT Trichy and IIT-Madras)
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Dr. G. Muruganantham</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " style = "max-width:105px;" src="images/image6.jpeg">
-                    <div class="col s8 ">
-                        Faculty, Dept of Management Studies, NIT Trichy<br/>
-                        Teaching, Research and Consultancy interest includes Branding, Consumer Insight and Quality Management.<br/>
-                        Corporate Trainer and Serving as a mentor to Students<br/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Mr. Mukundha Krishnan</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " style = "max-width:105px;" src="images/image7.jpeg">
-                    <div class="col s8 ">
-                        Holistic Healing Consultant and Yoga Guru, Madurai
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Mrs. Anuradha Nagarajan</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " style = "max-width:105px;" src="images/image8.jpeg">
-                    <div class="col s8 ">
-                        HR Consultant, Chennai
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <h5 class="col s12 center-align">Mr. V. Pandirajan</h5>
-                <div class="col s12 " style="min-height:120px;">
-                    <img class="col s4 " style = "max-width:105px;" src="images/image9.jpg">
-                    <div class="col s8 ">
-                        IRS, Deputy Director, Directorate General of Central Excise Intelligence, Calcutta
+                        Writer, Motivational Speaker, Trainer, HR Consultant <br/>
+                        Menmai Management Consultancy Services, Chennai<br/>
+                        <a href="http://www.writersomavalliappan.com" target="_blank" class="blue-text">MORE INFO</a>
                     </div>
                 </div>
             </div>
@@ -159,10 +92,77 @@
         </div>
         <div class="col s12 m6 l4">
             <div class="card">
+                <h5 class="col s12 center-align">Mr. Mukundha Krishnan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " style = "max-width:105px;" src="images/image7.jpeg">
+                    <div class="col s8 ">
+                        Holistic Healing Consultant and Yoga Guru, Madurai
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Dr. B. Vinodh</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " style = "max-width:105px;" src="images/image4.jpg">
+                    <div class="col s8 ">
+                        Faculty, Dept of Humanities, NIT-Trichy
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mr. V. Pandirajan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " style = "max-width:105px;" src="images/image9.jpg">
+                    <div class="col s8 ">
+                        IRS, Deputy Director, Directorate General of Central Excise Intelligence, Calcutta
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
                 <h5 class="col s12 center-align">Mr. Ramnath</h5>
                 <div class="col s12 " style="min-height:120px;">
                     <div class="col s12 ">
                         Senior HR Manager, Perfetti Van Melle India Pvt Ltd, Chennai
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Mrs. Anuradha Nagarajan</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " style = "max-width:105px;" src="images/image8.jpeg">
+                    <div class="col s8 ">
+                        HR Consultant, Chennai
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Dr. K. Ganesh</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " style = "max-width:105px;" src="images/image5.jpeg">
+                    <div class="col s8 ">
+                        Knowledge Expert, McKinsey & Company, Inc. Chennai (Alumnus of NIT Trichy and IIT-Madras)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <h5 class="col s12 center-align">Dr. G. Muruganantham</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " style = "max-width:105px;" src="images/image6.jpeg">
+                    <div class="col s8 ">
+                        Faculty, Dept of Management Studies, NIT Trichy<br/>
+                        Corporate Trainer and Serving as a mentor to Students<br/>
                     </div>
                 </div>
             </div>
