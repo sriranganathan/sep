@@ -5,6 +5,13 @@ View Registration
 @stop
 @section('css')
 <link type="text/css" rel="stylesheet" href="{{asset('css/pagination.css')}}"  media="screen,projection"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+.download
+{
+margin-top:10px;
+}
+</style>
 @stop
 @section('nav-bar')
     <li><a href="/" class="waves-effect waves-light">Home</a></li>
@@ -25,6 +32,7 @@ View Registration
     <li><a href="/logout">Logout</a></li>
 @stop
 @section('content')
+<p align="right"><a class="waves-effect waves-light btn blue download" href = "{{action('AdminController@excel')}}">Download as Excel</a></p>
 <table id="registration_list" class="striped bordered">
         <thead>
           <tr>

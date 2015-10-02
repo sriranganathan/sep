@@ -11,6 +11,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\registration as Registration;
 use Mail;
+use Excel;
 
 class AdminController extends Controller
 {
@@ -82,5 +83,23 @@ class AdminController extends Controller
               ->replyTo('marcon@nitt.edu','MURUGANANTHAM')
               ->subject('Confirmation of Participation for the SEP - NIT Trichy');
         });
+    }
+
+    public function excel()
+    {
+        $registration = Registration::all();
+        Excel::create('Registrations', function($excel) use ($registration) {
+            
+            $excel->sheet('First sheet', function($sheet) use ($registration) {
+                $sheet->fromModel($registration, null, 'A1', false, false);
+                $sheet->prependRow(1, array('ID','Reg_ID','Name','Gender','Degree','Course','Year','Department',
+                    'College with Address','Email ID','Contanct No.','Guardian\'s contanct No.','Amount','DD No.',
+                    'DD Date','Bank Name','Reason','is NITT','Email Sent'));
+
+            });
+
+            
+        })->export('xlsx');
+
     }
 }
