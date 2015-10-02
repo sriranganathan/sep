@@ -90,15 +90,19 @@ class AdminController extends Controller
         $registration = Registration::all();
         Excel::create('Registrations', function($excel) use ($registration) {
             
-            $excel->sheet('First sheet', function($sheet) use ($registration) {
+            $excel->sheet('List of Registrants', function($sheet) use ($registration) {
                 $sheet->fromModel($registration, null, 'A1', false, false);
                 $sheet->prependRow(1, array('ID','Reg_ID','Name','Gender','Degree','Course','Year','Department',
-                    'College with Address','Email ID','Contanct No.','Guardian\'s contanct No.','Amount','DD No.',
-                    'DD Date','Bank Name','Reason','is NITT','Email Sent'));
-
+                                            'College with Address','Email ID','Contanct No.','Guardian\'s contanct No.',
+                                            'Amount','DD No.','DD Date','Bank Name','Reason','is NITT','Email Sent'));
+                $sheet->freezePane('C2');
+                $sheet->getColumnDimension('A')
+                      ->setVisible(false);
+                $sheet->getColumnDimension('R')
+                      ->setVisible(false);
+                $sheet->getColumnDimension('S')
+                      ->setVisible(false);
             });
-
-            
         })->export('xlsx');
 
     }
