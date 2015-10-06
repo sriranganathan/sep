@@ -1,17 +1,17 @@
 @extends('base')
 
 @section('title')
-View Registration
+    View Registration
 @stop
 @section('css')
-<link type="text/css" rel="stylesheet" href="{{asset('css/pagination.css')}}"  media="screen,projection"/>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<style>
-.download
-{
-margin-top:10px;
-}
-</style>
+    <link type="text/css" rel="stylesheet" href="{{asset('css/pagination.css')}}"  media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+     .download
+     {
+         margin-top:10px;
+     }
+    </style>
 @stop
 @section('nav-bar')
     <li><a href="/" class="waves-effect waves-light">Home</a></li>
@@ -32,100 +32,130 @@ margin-top:10px;
     <li><a href="/logout">Logout</a></li>
 @stop
 @section('content')
-<p align="right"><a class="waves-effect waves-light btn blue download" href = "{{action('AdminController@excel')}}">Download as Excel</a></p>
-<table id="registration_list" class="striped bordered">
+    <p align="right"><a class="waves-effect waves-light btn blue download" href = "{{action('AdminController@excel')}}">Download as Excel</a></p>
+    <table style="width:30%">
+        <tr>
+            <td>
+                Total UG
+            </td>
+            <td>
+                {{$totalugregcount}}
+            </td>
+            <td>
+                Registered UG
+            </td>
+            <td>
+                {{$ugregcount}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Total PG
+            </td>
+            <td>
+                {{$totalpgregcount}}
+            </td>
+            <td>
+                Registered PG
+            </td>
+            <td>
+                {{$pgregcount}}
+            </td>
+        </tr>
+    </table>
+    <table id="registration_list" class="striped bordered">
         <thead>
-          <tr>
-              <th data-field="id">Reg_id</th>
-              <th data-field="name">Name</th>
-              <th data-field="degree">Degree</th>
-              <th data-field="email_sent">Email Sent</th>
-          </tr>
+            <tr>
+                <th data-field="id">Reg_id</th>
+                <th data-field="name">Name</th>
+                <th data-field="degree">Degree</th>
+                <th data-field="email_sent">Email Sent</th>
+            </tr>
         </thead>
 
         <tbody>
-         	@foreach($registrations as $registration)
+            @foreach($registrations as $registration)
          	<tr id="{{$registration->id}}">
-            <td>{{$registration->reg_id}}</td>
-            <td>{{$registration->name}}</td>
-            <td>{{$registration->degree}}</td>
-            <td class="email_sent_field">
-              @if($registration->email_sent == 1)
-              ✔
-              @else
-              ✗
-              @endif
-            </td>
-            </tr>
-		 	@endforeach
+                    <td>{{$registration->reg_id}}</td>
+                    <td>{{$registration->name}}</td>
+                    <td>{{$registration->degree}}</td>
+                    <td class="email_sent_field">
+                        @if($registration->email_sent == 1)
+                            ✔
+                        @else
+                            ✗
+                        @endif
+                    </td>
+                </tr>
+	    @endforeach
         </tbody>
-      </table>
-{!! $registrations->render() !!}
-<div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Registration details</h4>
-      <p id="reg_id"></p>
-      <p id="name"></p>
-      <p id="gender"></p>
-      <p id="degree"></p>
-      <p id="course"></p>
-      <p id="year"></p>
-      <p id="dept"></p>
-      <p id="college"></p>
-      <p id="email"></p>
-      <p id="mobile"></p>
-      <p id="guardian_mobile"></p>
-      <p id="amount"></p>
-      <p id="dd_no"></p>
-      <p id="dd_date"></p>
-      <p id="bank_name"></p>
-      <p id="reason"></p>
+    </table>
+    {!! $registrations->render() !!}
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Registration details</h4>
+            <p id="reg_id"></p>
+            <p id="name"></p>
+            <p id="gender"></p>
+            <p id="degree"></p>
+            <p id="course"></p>
+            <p id="year"></p>
+            <p id="dept"></p>
+            <p id="college"></p>
+            <p id="email"></p>
+            <p id="mobile"></p>
+            <p id="guardian_mobile"></p>
+            <p id="amount"></p>
+            <p id="dd_no"></p>
+            <p id="dd_date"></p>
+            <p id="bank_name"></p>
+            <p id="reason"></p>
 
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+            <button class="waves-effect waves-light btn id_for_email">Send Email</button>
+        </div>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
-      <button class="waves-effect waves-light btn id_for_email">Send Email</button>
-    </div>
-</div>
 @stop
 @section('javascript')
-$(document).ready(function(){
-  $('#registration_list > tbody > tr').css('cursor','pointer');
+    $(document).ready(function(){
+    $('#registration_list > tbody > tr').css('cursor','pointer');
     $.ajaxSetup({
-        headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') }
+    headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') }
     });
 
-  $('#registration_list > tbody > tr').click(function(){
+    $('#registration_list > tbody > tr').click(function(){
     var id = this.id;
     $.ajax({
-        method: "POST",
-        url: base_url+"/show_registration",
-        data: { id :id }
+    method: "POST",
+    url: base_url+"/show_registration",
+    data: { id :id }
     }).done(function( msg ) {
-          modalInject($.parseJSON(msg));
+    modalInject($.parseJSON(msg));
     });
- 
-  });
+    
+    });
 
-   $('.id_for_email').click(function(){
+    $('.id_for_email').click(function(){
     var id = this.id;
     $.ajax({
-        method: "POST",
-        url: base_url+"/email",
-        data: {id :id }
+    method: "POST",
+    url: base_url+"/email",
+    data: {id :id }
     }).done(function( msg ) {
-        alert("E-Mail Sent");
-        $("#"+id+" .email_sent_field").html('✔');
+    alert("E-Mail Sent");
+    $("#"+id+" .email_sent_field").html('✔');
     });
- 
-  });
+    
+    });
 
 
-  });
+    });
 
 
- function modalInject(json)
-{
+    function modalInject(json)
+    {
     $('#reg_id').html("<strong>REGISTRATION ID</strong> : "+json.reg_id);
     $('#name').html("<strong>NAME : </strong>"+json.name);
     $('#gender').html("<strong>Gender : </strong>"+json.gender);
@@ -143,6 +173,6 @@ $(document).ready(function(){
     $('#reason').html("<strong>Reason : </strong>"+json.reason);
     $('.id_for_email').attr('id',json.id);
     $('#modal1').openModal();
-}
+    }
 
 @stop

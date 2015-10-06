@@ -18,7 +18,11 @@ class AdminController extends Controller
     public function view()
     {
         $registrations = registration::paginate(50);
-        return view('view', compact('registrations'));
+        $ugregcount = Registration::where('degree','UG')->where('email_sent',1)->count();
+        $pgregcount = Registration::where('degree','PG')->where('email_sent',1)->count();
+        $totalugregcount = Registration::where('degree','UG')->count();
+        $totalpgregcount = Registration::where('degree','PG')->count();
+        return view('view', compact('registrations', 'ugregcount', 'pgregcount', 'totalugregcount', 'totalpgregcount'));
     }
 
     public function show_registration(Request $request)

@@ -47,6 +47,18 @@
         </div>
         <div class="col s12 m6 l4">
             <div class="card">
+                <h5 class="col s12 center-align">Dr. S. Arul Daniel</h5>
+                <div class="col s12 " style="min-height:120px;">
+                    <img class="col s4 " style = "max-width:105px;" src="images/daniel.jpg">
+                    <div class="col s8 ">
+                        Dean (Academic)<br/>
+                        Professor, EEE Dept., NIT Trichy
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
                 <h5 class="col s12 center-align">Mr. Ravi Kumar</h5>
                 <div class="col s12 " style="min-height:120px;">
                     <img class="col s4 " style = "max-width:105px;" src="images/image2.jpeg">
