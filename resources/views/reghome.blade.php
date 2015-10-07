@@ -55,7 +55,7 @@
                         <br>
                         <strong style="font-size: large;">No spot registration</strong>
                         <br>
-                        <center><strong style="font-size: large;">Last date for registration: 6 October 2015</strong></center>
+                        <center><strong style="font-size: large;">Last date for registration: 7 October 2015</strong></center>
                         <br>
                         Please have the details of your DD while registering.
                     </p>
