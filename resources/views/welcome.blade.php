@@ -75,7 +75,18 @@
                                    margin-left: 0px;" src="/images/lamp.gif" height="250px">    
     </div>  
     <div class="row">
-        <div class="col s5 offset-s7">
+        <div class="col s5">
+            <div  class="card white">
+                <div class="card-content black-text">
+                    <h5>Venue</h5>
+                    <div>
+                        <h6>Barn Hall, NIT Trichy</h6>
+                        <p>Registration starts at 8.30 am on October 9</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s5 offset-s2">
             <div  class="card white">
                 <div class="card-content black-text">
                     <h5>Programme Co-ordinator</h5>
