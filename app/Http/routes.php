@@ -35,5 +35,5 @@ Route::post('/show_registration'        ,'AdminController@show_registration');
 Route::get('/logout'                    ,'AdminController@logout');
 Route::post('/email'					,'AdminController@email');
 Route::get('/test_email'				,'AdminController@test_email');
-Route::get('/excel'					,'AdminController@excel');
+Route::get('/excel'						,'AdminController@excel');
 });
